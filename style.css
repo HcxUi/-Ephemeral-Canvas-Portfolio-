@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;600;700&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents scrollbars from p5.js canvas if it's slightly off */
+    font-family: 'Open Sans', sans-serif; /* Default body font */
+    background-color: #121212; 
+    color: #e0e0e0; 
+    scroll-behavior: smooth; 
+}
+
+#defaultCanvas0 {
+    position: fixed; /* Or absolute, depending on desired scroll behavior */
+    top: 0;
+    left: 0;
+    z-index: -1; /* Place canvas behind content */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 50px;
+    box-sizing: border-box;
+    z-index: 10;
+    background-color: rgba(18, 18, 18, 0.5); 
+    backdrop-filter: blur(5px);
+    font-family: 'Raleway', sans-serif; /* Font for header/nav */
+}
+
+header nav {
+    text-align: right;
+}
+
+header nav a {
+    color: #e0e0e0;
+    margin-left: 25px; /* Increased spacing */
+    text-decoration: none;
+    font-weight: 600; /* Bolder nav links */
+    font-size: 0.95em; /* Slightly adjusted size */
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #007bff; /* Highlight color on hover - can be changed */
+}
+
+#portfolio-content {
+    position: relative;
+    z-index: 1;
+    padding: 100px 50px 50px; 
+    text-align: center;
+    height: calc(100vh - 150px); 
+    overflow-y: auto; 
+    max-width: 900px; /* Max width for content readability */
+    margin-left: auto; /* Center content area */
+    margin-right: auto;
+}
+
+#hero h1 {
+    font-size: 3.5em; /* Larger hero heading */
+    margin-bottom: 0.5em;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+#hero p {
+    font-size: 1.3em; /* Larger hero paragraph */
+    color: #b0b0b0;
+    font-weight: 300;
+}
+
+/* Styling for new sections */
+#portfolio-content section {
+    padding: 50px 30px; /* Increased padding */
+    margin-bottom: 40px; /* Increased margin */
+    background-color: rgba(25, 25, 25, 0.4); /* Slightly more pronounced section background */
+    border-radius: 10px; /* Softer radius */
+    border-left: 3px solid rgba(255, 255, 255, 0.1); /* Subtle left border accent */
+}
+
+#portfolio-content section:last-child {
+    margin-bottom: 0;
+}
+
+#portfolio-content h2 {
+    font-size: 2.5em; /* Larger section headings */
+    color: #f5f5f5; /* Slightly brighter heading color */
+    margin-bottom: 25px;
+    border-bottom: 1px solid #555; /* Thinner, more subtle border */
+    padding-bottom: 15px;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+#portfolio-content p,
+#portfolio-content ul {
+    font-size: 1.1em; 
+    line-height: 1.7; /* Increased line height for readability */
+    color: #c8c8c8; /* Slightly adjusted paragraph color */
+    text-align: left;
+    font-weight: 400; /* Standard weight for Open Sans */
+}
+
+#portfolio-content ul {
+    list-style-position: outside;
+    padding-left: 20px;
+}
+
+#portfolio-content li {
+    margin-bottom: 8px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(18, 18, 18, 0.8);
+    z-index: 10;
+    font-size: 0.9em;
+}
